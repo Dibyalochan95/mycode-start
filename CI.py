@@ -9,16 +9,16 @@ if principal <= 0 or rate <= 0 or time <= 0 or n <= 0:
 else:
     amount = principal*(1 + rate/(100*n))**(n*time)
     print("*"*30)
-    print("Amount payable :", round(amount,2))
+    print("Amount payable : Rs", round(amount,2))
     print("*"*30)
-    print("Interest payable is ", round(amount-principal, 2))
+    print("Interest payable is : Rs ", round(amount-principal, 2))
     print("*"*30)
 
 breakdown = input("Enter yes or no :")
 if breakdown == "yes":
     for month in range(1,time*12 +1):
         amount = principal*(1 + rate/(100*n))**(month)
-        print("Month :", month, ":", round(amount,2))
+        print("Month :", month, ": Rs", round(amount,2))
 elif breakdown == "no":
     print("Have a nice day")
 else:
